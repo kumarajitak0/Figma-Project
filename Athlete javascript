@@ -1,0 +1,21 @@
+//for Fetching report json mock data for john Doe
+fetch('Athlete.json')
+.then(response => response.json())
+.then(Athlete =>
+    {const AthleteJson=document.getElementById('Athlete_json');
+Athlete.innerHTML=`
+<p>ID: ${Athlete.ID}</p>
+<p>Name: ${Athlete.Name}</p>;
+<p>Email: ${Athlete.Email}</p>;
+<p>Report: ${Athlete.Report}</p>;`});
+
+//for Fetching report json mock data for jane smith
+fetch('AthleteReport2.json')
+.then(response => response.json())
+.then(Athlete =>
+    {const AthleteJson=document.getElementById('Athlete_json');
+Athlete.innerHTML=`
+<p>ID: ${Athlete.ID}</p>
+<p>Name: ${Athlete.Name}</p>;
+<p>Email: ${Athlete.Email}</p>;
+<p>Report: ${Athlete.Report}</p>;`});
