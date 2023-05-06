@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Athlete Health Dashboard</title>
+	<link rel="stylesheet" href="css/Athelet_style.css">
+	<script src="Athelet.js"></script>
+	
+	<style>
+		body
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: silver;
+}
+h1
+{
+	text-align: center;
+}
+container
+	{
+	margin-left: 2%;
+	}
+	</style>
+</head>
+<body>
+	<h1>Health Club Manager</h1>
+	<div class="container"><h3>Dashboard</h3></div>
+	<div><a href="AthleteList.html">List Of Athelet</a></div>
+	<div><a href="HealthReport.html">Health Report</a></div>
+	<!-- <div><button onclick="HealthReport()">Health Report</button></div> -->
+		
+</body>
+</html>
