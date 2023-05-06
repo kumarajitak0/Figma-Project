@@ -1,0 +1,11 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load data from CSV file
+data = pd.read_csv('HCP_benchmark_data.csv')
+
+# Generate distribution plot
+plt.hist(data['wholebrain Volume'], bins=10)
+
+# Save plot as PNG file
+plt.savefig('distribution_plot.png')
