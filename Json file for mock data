@@ -1,0 +1,112 @@
+{
+
+    "athlete_name": "John Doe",
+    "age": 28,
+    "height_cm": 182,
+    "weight_kg": 75,
+    "blood_pressure": {
+      "systolic": 120,
+      "diastolic": 80
+    },
+    "resting_heart_rate_bpm": 62,
+    "oxygen_saturation": 98,
+    "injury_history": [
+      {
+        "type": "Sprained ankle",
+        "date": "2023-02-10",
+        "status": "Fully recovered"
+      },
+      {
+        "type": "Muscle strain",
+        "date": "2022-11-15",
+        "status": "Recovered, but some residual weakness"
+      }
+    ],
+    "medication_history": [
+      {
+        "name": "Ibuprofen",
+        "dosage": "400mg",
+        "frequency": "Once daily",
+        "duration": "Ongoing"
+      },
+      {
+        "name": "Multivitamin",
+        "dosage": "1 tablet",
+        "frequency": "Once daily",
+        "duration": "Ongoing"
+      }
+    ],
+    "allergies": [
+      {
+        "name": "Peanuts",
+        "reaction": "Anaphylaxis"
+      }
+    ],
+    "vaccinations": [
+      {
+        "name": "COVID-19",
+        "date": "2023-04-20"
+      },
+      {
+        "name": "Influenza",
+        "date": "2023-01-05"
+      }
+    ]
+}
+
+// for Jane Smith
+
+{
+    "athlete_name": "Jane Smith",
+    "age": 28,
+    "height_cm": 182,
+    "weight_kg": 75,
+    "blood_pressure": {
+      "systolic": 120,
+      "diastolic": 80
+    },
+    "resting_heart_rate_bpm": 62,
+    "oxygen_saturation": 98,
+    "injury_history": [
+      {
+        "type": "Sprained ankle",
+        "date": "2023-02-10",
+        "status": "Fully recovered"
+      },
+      {
+        "type": "Muscle strain",
+        "date": "2022-11-15",
+        "status": "Recovered, but some residual weakness"
+      }
+    ],
+    "medication_history": [
+      {
+        "name": "Ibuprofen",
+        "dosage": "400mg",
+        "frequency": "Once daily",
+        "duration": "Ongoing"
+      },
+      {
+        "name": "Multivitamin",
+        "dosage": "1 tablet",
+        "frequency": "Once daily",
+        "duration": "Ongoing"
+      }
+    ],
+    "allergies": [
+      {
+        "name": "Peanuts",
+        "reaction": "Anaphylaxis"
+      }
+    ],
+    "vaccinations": [
+      {
+        "name": "COVID-19",
+        "date": "2023-04-20"
+      },
+      {
+        "name": "Influenza",
+        "date": "2023-01-05"
+      }
+    ]
+}
