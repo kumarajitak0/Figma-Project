@@ -1,4 +1,6 @@
 //for Fetching report json mock data for john Doe
+function convert2()
+{
 fetch('Athlete.json')
 .then(response => response.json())
 .then(Athlete =>
@@ -8,8 +10,11 @@ Athlete.innerHTML=`
 <p>Name: ${Athlete.Name}</p>;
 <p>Email: ${Athlete.Email}</p>;
 <p>Report: ${Athlete.Report}</p>;`});
+}
 
 //for Fetching report json mock data for jane smith
+function convert1()
+{
 fetch('AthleteReport2.json')
 .then(response => response.json())
 .then(Athlete =>
@@ -19,3 +24,4 @@ Athlete.innerHTML=`
 <p>Name: ${Athlete.Name}</p>;
 <p>Email: ${Athlete.Email}</p>;
 <p>Report: ${Athlete.Report}</p>;`});
+}
