@@ -5,6 +5,8 @@
   </head>
   <body>
     <img src="image1/brain.png" alt="Figma layout">
+    <img src="image1/Athelete_Health Report.png" alt="Figma layout">
+
     <canvas id="myChart"></canvas>
     <script>
       // Read the CSV data
