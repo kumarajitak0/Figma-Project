@@ -57,7 +57,7 @@ tr:hover {
     </style>
 </head>
 <body>
-	<h1 style="text-align: center;">Athlete Health Dashboard</h1>
+	<h1 style="text-align: center; color:darkcyan">Athlete Health Dashboard</h1>
 	<table id="athlete-list">
 		<thead>
 			<tr>
@@ -106,13 +106,13 @@ tr:hover {
             id: 2,
             name: 'Jane Smith',
             email: 'janesmith@example.com',
-            report: 'report2.json'
+            report: 'report2'
         },
         {
             id: 3,
             name: 'Bob Johnson',
             email: 'bobjohnson@example.com',
-            report: 'report3.json'
+            report: 'report3'
         }
     ];
     
@@ -132,20 +132,20 @@ tr:hover {
         athleteList.appendChild(row);
     });
     
-    //Load health report
+   // Load health report
     function loadHealthReport(reportFile) {
         const healthReport = document.querySelector('#health-report');
         healthReport.innerHTML = '';
         healthReport.style.display = 'block';
         const img = document.createElement('img');
-        img.src = 'E:\Club_Health_Dashboard\brain.png'; // replace with your own image file
+        img.src = 'image1/brain.png'; // replace with your own image file
         healthReport.appendChild(img);
-        const h2 = document.createElement('h2');
-        h2.textContent = 'Whole Brain Volume';
-        healthReport.appendChild(h2);
-        const p = document.createElement('p');
-        p.textContent = 'Distribution plot of whole brain volume.';
-        healthReport.appendChild(p);
+    //     const h2 = document.createElement('h2');
+    //     h2.textContent = 'Whole Brain Volume';
+    //     healthReport.appendChild(h2);
+    //     const p = document.createElement('p');
+    //     p.textContent = 'Distribution plot of whole brain volume.';
+    //     healthReport.appendChild(p);
        // Use CSV data to create distribution plot
     }
     
