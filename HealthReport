@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Distribution Plot</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <img src="image1/brain.png" alt="Figma layout">
+    <canvas id="myChart"></canvas>
+    <script>
+      // Read the CSV data
+      const csvData = `1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19`;
+      const dataArray = csvData.split(',').map(Number);
+      
+      // Create a dataset for the distribution plot
+      const data = {
+        labels: ['1227388.593',
+'1136518.666',
+'1201464.334',
+'1172755.798',
+'1118350.749',
+'1149321.838',
+'1252181.414',
+'1169098.196',
+'1164613.32',
+'1150910.491',
+'1275187.042',
+'1134861.812',
+'1249393.81',
+'1161467.604',
+'1226332.656',
+'1161826.631',
+',1154400.215',
+'1187557.046',
+'1213915.666'
+],
+        datasets: [{
+          label: 'Distribution Plot For whole Brain Volume',
+          data: dataArray,
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }]
+      };
+      
+      // Create the distribution plot
+      const ctx = document.getElementById('myChart').getContext('2d');
+      const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
