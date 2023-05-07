@@ -1,112 +1,139 @@
-{
-
-    "athlete_name": "John Doe",
-    "age": 28,
-    "height_cm": 182,
-    "weight_kg": 75,
-    "blood_pressure": {
-      "systolic": 120,
-      "diastolic": 80
-    },
-    "resting_heart_rate_bpm": 62,
-    "oxygen_saturation": 98,
-    "injury_history": [
-      {
-        "type": "Sprained ankle",
-        "date": "2023-02-10",
-        "status": "Fully recovered"
-      },
-      {
-        "type": "Muscle strain",
-        "date": "2022-11-15",
-        "status": "Recovered, but some residual weakness"
-      }
-    ],
-    "medication_history": [
-      {
-        "name": "Ibuprofen",
-        "dosage": "400mg",
-        "frequency": "Once daily",
-        "duration": "Ongoing"
-      },
-      {
-        "name": "Multivitamin",
-        "dosage": "1 tablet",
-        "frequency": "Once daily",
-        "duration": "Ongoing"
-      }
-    ],
-    "allergies": [
-      {
-        "name": "Peanuts",
-        "reaction": "Anaphylaxis"
-      }
-    ],
-    "vaccinations": [
-      {
-        "name": "COVID-19",
-        "date": "2023-04-20"
-      },
-      {
-        "name": "Influenza",
-        "date": "2023-01-05"
-      }
-    ]
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Athlete Information</title>
+  <style>
+    table
+         {
+	border-style:solid;
+    border-color: black;
+    border-width: 2px;
+	width: 100%;
+    
 }
+        th
+        {
+            border-style:solid;
+            border-color: black;
+            border-width: 1px;
+            text-align: center;
+            background-color: darkgrey;
+            font-size: 1.4em;
+        }
+        td
+        {
+            border-style:solid;
+            border-color: black;
+            border-width: 1px;
+            text-align: center;
+        }
+        td:hover
+        {
+            background-color:lightblue;
+	        cursor: pointer;   
+        }
+  </style>
+</head>
+<body>
+  <table id="Athlete1_Report">
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </table>
 
-// for Jane Smith
+  <script>
+    const athleteData = {
+      "athlete_name": "John Doe",
+      "age": 28,
+      "height_cm": 182,
+      "weight_kg": 75,
+      "blood_pressure": {
+        "systolic": 120,
+        "diastolic": 80
+      },
+      "injury_history": [
+        {
+          "type": "Sprained ankle",
+          "date": "2023-02-10",
+          "status": "Fully recovered"
+        },
+        {
+          "type": "Muscle strain",
+          "date": "2022-11-15",
+          "status": "Recovered, but some residual weakness"
+        }
+      ],
+      "medication_history": [
+        {
+          "name": "Ibuprofen",
+          "dosage": "400mg",
+          "frequency": "Once daily",
+          "duration": "Ongoing"
+        },
+        {
+          "name": "Multivitamin",
+          "dosage": "1 tablet",
+          "frequency": "Once daily",
+          "duration": "Ongoing"
+        }
+      ],
+      "allergies": [
+        {
+          "name": "Peanuts",
+          "reaction": "Anaphylaxis"
+        }
+      ],
+      "vaccinations": [
+        {
+          "name": "COVID-19",
+          "date": "2023-04-20"
+        },
+        {
+          "name": "Influenza",
+          "date": "2023-01-05"
+        }
+      ]
+    };
 
-{
-    "athlete_name": "Jane Smith",
-    "age": 28,
-    "height_cm": 182,
-    "weight_kg": 75,
-    "blood_pressure": {
-      "systolic": 120,
-      "diastolic": 80
-    },
-    "resting_heart_rate_bpm": 62,
-    "oxygen_saturation": 98,
-    "injury_history": [
-      {
-        "type": "Sprained ankle",
-        "date": "2023-02-10",
-        "status": "Fully recovered"
-      },
-      {
-        "type": "Muscle strain",
-        "date": "2022-11-15",
-        "status": "Recovered, but some residual weakness"
+    const table = document.getElementById('Athlete1_Report');
+    for (const key in athleteData) {
+      if (Array.isArray(athleteData[key])) {
+        for (const item of athleteData[key]) {
+          for (const itemKey in item) {
+            const row = document.createElement('tr');
+            const cell1 = document.createElement('td');
+            const cell2 = document.createElement('td');
+            cell1.textContent = itemKey;
+            cell2.textContent = item[itemKey];
+            row.appendChild(cell1);
+            row.appendChild(cell2);
+            table.appendChild(row);
+          }
+        }
+      } else if (typeof athleteData[key] === 'object') {
+        for (const subKey in athleteData[key]) {
+          const row = document.createElement('tr');
+          const cell1 = document.createElement('td');
+          const cell2 = document.createElement('td');
+          cell1.textContent = `${key}.${subKey}`;
+          cell2.textContent = athleteData[key][subKey];
+          row.appendChild(cell1);
+          row.appendChild(cell2);
+          table.appendChild(row);
+        }
+      } else {
+        const row = document.createElement('tr');
+        const cell1 = document.createElement('td');
+        const cell2 = document.createElement('td');
+        cell1.textContent = key;
+        cell2.textContent = athleteData[key];
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        table.appendChild(row);
       }
-    ],
-    "medication_history": [
-      {
-        "name": "Ibuprofen",
-        "dosage": "400mg",
-        "frequency": "Once daily",
-        "duration": "Ongoing"
-      },
-      {
-        "name": "Multivitamin",
-        "dosage": "1 tablet",
-        "frequency": "Once daily",
-        "duration": "Ongoing"
-      }
-    ],
-    "allergies": [
-      {
-        "name": "Peanuts",
-        "reaction": "Anaphylaxis"
-      }
-    ],
-    "vaccinations": [
-      {
-        "name": "COVID-19",
-        "date": "2023-04-20"
-      },
-      {
-        "name": "Influenza",
-        "date": "2023-01-05"
-      }
-    ]
-}
+    }
+  </script>
+</body>
+</html>
