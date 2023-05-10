@@ -1,4 +1,3 @@
-
 <html>
 <head>
 	<title>Athlete Health Dashboard</title>
